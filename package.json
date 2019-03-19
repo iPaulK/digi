@@ -1,0 +1,17 @@
+{
+  "name": "digi",
+  "version": "1.0.0",
+  "description":"",
+  "scripts": {
+    "dev": "nodemon ./server.js",
+    "start": "node ./server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongodb": "^3.1.13"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  },
+  "license": "MIT"
+}
