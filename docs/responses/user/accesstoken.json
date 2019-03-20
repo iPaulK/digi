@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "accessToken": {
+      "type": "string",
+      "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YzkxYTY1ZTRlM2Q2ODAyODU4ZDBkZWIiLCJlbWFpbCI6Imt1bGlub3ZpNEB5YW5kZXgucnUiLCJmaXJzdE5hbWUiOiJQYXZlbCIsImxhc3ROYW1lIjoiS3VsaW5vdmljaCIsInBob25lTnVtYmVyIjoiMzc1MjkyNjEwMDkyIiwiaWF0IjoxNTUzMDU1MDQ1fQ.482ecwkh7T7_j22BJVRfBJubJH0RbB0Jo4LME8wOsq4"
+    }
+  }
+}

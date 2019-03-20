@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "required": [
+    "code",
+    "target"
+  ],
+  "properties": {
+    "code": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "source": {
+      "type": "object"
+    }
+  }
+}

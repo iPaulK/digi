@@ -1,7 +1,6 @@
 module.exports = handler;
 
-function handler(err, req, res) {
-    
+function handler(err, req, res, next) {
     if (err.name === 'ValidationError') {
         var errors = []
         for (const [field, e] of Object.entries(err.errors)) {

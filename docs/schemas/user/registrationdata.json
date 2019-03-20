@@ -1,0 +1,32 @@
+{
+  "required": [
+    "email",
+    "firstName",
+    "lastName",
+    "phoneNumber",
+    "password"
+  ],
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string",
+      "example": "email@example.com"
+    },
+    "password":{
+      "type": "string",
+      "example":"U?SAL%jdgX$~"
+    },
+    "phoneNumber": {
+      "type": "string",
+      "example": "+375291234567"
+    },
+    "firstName": {
+      "type": "string",
+      "example": "Jack"
+    },
+    "lastName": {
+      "type": "string",
+      "example": "Sparrow"
+    }
+  }
+}

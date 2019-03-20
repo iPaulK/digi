@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "nodemon ./server.js",
     "start": "node ./server.js",
-    "precommit": "eslint ."
+    "precommit": "eslint .",
+    "doc": "npx redoc-cli serve ./docs/openapi.json --watch --ssr"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

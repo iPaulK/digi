@@ -6,7 +6,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const errorHandler = require('./modules/core/helpers/error');
 
-const port = process.env.PORT || 8080; // set the port
+const port = process.env.PORT || 3000; // set the port
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

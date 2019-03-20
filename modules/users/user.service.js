@@ -26,8 +26,19 @@ async function authenticate({ email, password }) {
 }
 
 async function create(userParam) {
-    //console.log("userParam", userParam)
     const user = new User(userParam);
-    // save user
+    
     await user.save();
+
+    const { 
+        password,
+        created_at,
+        updated_at,
+        __v, 
+        ...userWithoutPassword
+    } = user.toObject();
+
+    return {
+        ...userWithoutPassword
+    };
 }

@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {
+    "_id": {
+      "type": "string",
+      "example": "5c92143583ad5f0262a4fe01"
+    },
+    "firstName": {
+      "type": "string",
+      "example": "Jack"
+    },
+    "lastName":{
+      "type": "string",
+      "example": "Sparrow"
+    },
+    "email":{
+      "type": "string",
+      "example": "email@example.com"
+    },
+    "phoneNumber":{
+      "type": "string",
+      "example": "+375291234567"
+    }
+  }
+}

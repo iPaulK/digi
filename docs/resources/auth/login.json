@@ -1,0 +1,43 @@
+{
+  "post": {
+    "summary": "Login",
+    "tags": [
+      "Auth"
+    ],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "../../schemas/user/logindata.json"
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "ok",
+        "content": {
+          "application/json": {
+            "schema": {
+              "properties": {
+                "data": {
+                  "$ref": "../../responses/user/accesstoken.json"
+                }
+              }
+            }
+          }
+        }
+      },
+      "422": {
+        "description": "invalid auth data",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../../responses/errors.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}
