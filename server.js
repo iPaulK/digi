@@ -1,26 +1,23 @@
+require('rootpath')();
+
 const express = require('express');
 const app = express(); // create our app w/ express
-const mongodb = require('mongodb');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const errorHandler = require('./modules/core/helpers/error');
 
 const port = process.env.PORT || 8080; // set the port
 
-const db = require('./config/db'); // load the database config
-const client = mongodb.MongoClient;
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(cors());
 
-client.connect(db.connectionString, function(err, db) {
-    if(err) {
-        console.log('database is not connected', err)
-    }
-    else {
-        console.log('connected!!')
-    }
-});
+// api routes
+app.use('/api/v1/users', require('./modules/users/users.controller'));
+app.use('/api/v1/auth', require('./modules/users/auth.controller'));
 
-app.get('/', function(req, res) {
-    res.json({"hello": "world"});
-});
+// error handler
+app.use(errorHandler);
 
 // start server
-const server = app.listen(port, function () {
-    console.log('Server listening on port ' + port);
-});
+app.listen(port);
